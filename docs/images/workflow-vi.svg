@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="272" viewBox="0 0 640 272" role="img" aria-labelledby="title">
+  <title id="title">Quy trình Design Team</title>
+  <rect width="640" height="272" rx="15" fill="#142437"/>
+  <g font-family="Segoe UI, Arial, sans-serif">
+  <rect x="24" y="22" width="251" height="65" fill="#22394e" rx="8"/>
+  <rect x="340" y="22" width="276" height="65" fill="#284055" rx="8"/>
+  <text x="150" y="64" font-size="26" font-weight="600" fill="#eff3f4" text-anchor="middle">Yêu cầu và dự án</text>
+  <text x="478" y="64" font-size="26" font-weight="600" fill="#eff3f4" text-anchor="middle">Chọn phương pháp</text>
+  <g fill="none" stroke="#ebb58a" stroke-width="3" stroke-linejoin="round">
+    <path d="M279 54h54m-9-8 9 8-9 8"/>
+    <path d="M478 87v22H110v36m-7-8 7 8 7-8 M320 109v36m-7-8 7 8 7-8 M478 109h52v36m-7-8 7 8 7-8"/>
+  </g>
+  <rect x="16" y="150" width="188" height="96" rx="8" fill="#f5eee1"/>
+  <text x="110" y="190" font-size="29" font-weight="700" fill="#142437" text-anchor="middle">Kế hoạch</text>
+  <text x="110" y="223" font-size="24" font-weight="450" fill="#31495a" text-anchor="middle">Cách làm</text>
+  <rect x="226" y="150" width="188" height="96" rx="8" fill="#f5eee1"/>
+  <text x="320" y="190" font-size="29" font-weight="700" fill="#142437" text-anchor="middle">Review</text>
+  <text x="320" y="223" font-size="24" font-weight="450" fill="#31495a" text-anchor="middle">Vấn đề</text>
+  <rect x="436" y="150" width="188" height="96" rx="8" fill="#f5eee1"/>
+  <text x="530" y="190" font-size="29" font-weight="700" fill="#142437" text-anchor="middle">Triển khai</text>
+  <text x="530" y="223" font-size="24" font-weight="450" fill="#31495a" text-anchor="middle">Bản đã thử</text>
+  </g>
+</svg>

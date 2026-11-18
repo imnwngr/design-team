@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="175" viewBox="0 0 640 175" role="img" aria-labelledby="title">
+  <title id="title">Filled address field before and after adding a persistent label</title>
+  <rect width="640" height="175" rx="14" fill="#f5eee1"/>
+  <g font-family="Segoe UI, Arial, sans-serif" fill="#142437">
+    <text x="20" y="37" font-weight="700" font-size="25">Original field</text>
+    <text x="344" y="37" font-weight="700" font-size="25">Suggested fix</text>
+    <path stroke="#c5b7a7" d="M318 20v135"/>
+    <text x="344" y="86" font-weight="600" font-size="25">Street address</text>
+    <g fill="#fff" stroke="#64788a" stroke-width="2"><rect x="20" y="96" width="267" height="51" rx="6"/><rect x="344" y="96" width="273" height="51" rx="6"/></g>
+    <text x="33" y="129" font-size="24">10 Maple Street</text><text x="357" y="129" font-size="24">10 Maple Street</text>
+  </g>
+</svg>
