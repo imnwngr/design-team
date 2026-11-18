@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Team"
+  short_description: "Choose design skills and verify the resulting interface"
+  default_prompt: "Use $design-team to assess this project and recommend a scoped design plan."
