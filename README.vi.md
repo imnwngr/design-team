@@ -1,12 +1,22 @@
 ![Bìa Design Team, từ bản phác trên giấy can đến mẫu giao diện đặt lịch trên bàn thiết kế.](docs/images/studio-cover.jpg)
 
-# Design Team
+<h1 align="center">Design Team</h1>
+<p align="center"><strong>Chọn phương pháp thiết kế theo từng dự án cùng Codex.</strong></p>
+<p align="center"><a href="README.md">English</a> · <strong>Tiếng Việt</strong></p>
+<p align="center">
+  <a href="#bắt-đầu">Bắt đầu</a> ·
+  <a href="#từ-yêu-cầu-đến-kết-quả">Quy trình</a> ·
+  <a href="#bộ-công-cụ">Bộ công cụ</a> ·
+  <a href="#cài-đặt">Cài đặt</a> ·
+  <a href="#tài-liệu-và-kiểm-chứng">Tài liệu</a>
+</p>
 
-**Cho Codex biết bạn đang làm màn hình nào và người dùng cần làm được gì ở đó.** Design Team giúp Codex chọn phương pháp phù hợp từ 12 repo thiết kế. Bạn có thể xin một bản kế hoạch, nhờ xem lại một bước khó dùng hoặc yêu cầu sửa giao diện rồi thử ngay trong dự án.
+---
 
-[English](README.md) · **Tiếng Việt**
+**Màn hình này cần cải thiện ở đâu để người dùng hoàn thành được việc của họ?** Bạn đưa Codex tên màn hình, luồng thao tác hoặc ảnh chụp. Design Team hướng dẫn Codex đọc dự án, chọn phương pháp phù hợp trong 12 repo và trả về kế hoạch, bản review hoặc thay đổi để bạn dùng thử.
 
-[Bắt đầu](#bắt-đầu) · [Chọn việc cần làm](#chọn-việc-cần-làm) · [Xem một ví dụ review](#xem-một-ví-dụ-review) · [Bộ công cụ](#bộ-công-cụ)
+> [!NOTE]
+> Bản cài gồm skill điều phối và danh mục phương pháp. Mỗi công cụ chuyên biệt có điều kiện chạy riêng. Codex ghi rõ phần đã thử và phần còn cần kiểm chứng.
 
 ## Bắt đầu
 
@@ -31,24 +41,35 @@ Dừng ở kế hoạch.
 
 Bạn sẽ nhận được một kế hoạch ngắn gồm thao tác chính của khách, hướng thiết kế, skill được chọn và cách kiểm tra. Script cài skill điều phối cùng danh mục 12 repo. Khi một việc cần công cụ chuyên biệt, Codex sẽ xem điều kiện chạy của công cụ đó.
 
-<details>
-<summary>Thử trước khi cài hoặc chỉ cài cho một dự án</summary>
-
-Sau khi clone, đưa Codex đường dẫn tuyệt đối đến `skills/design-team/SKILL.md` và yêu cầu dùng hướng dẫn trong file đó cho brief của bạn. Sau khi cài, bạn có thể gọi trực tiếp bằng tên skill.
-
-Vị trí cài mặc định là `~/.agents/skills/design-team`. Muốn dùng riêng cho một dự án, dùng đường dẫn đích của dự án như trong ví dụ dưới đây.
-
-```powershell
-./scripts/Install-Skill.ps1 -Destination 'C:\dev\my-project\.agents\skills\design-team'
-```
-
-Nếu cài thủ công, chép cả thư mục `skills/design-team`, gồm `references` và `agents`, tới vị trí đó. Script yêu cầu thư mục đích mới để giữ nguyên bản đã cài.
-
-</details>
-
 ## Từ yêu cầu đến kết quả
 
 ![Codex đọc yêu cầu và dự án, chọn phương pháp rồi trả kế hoạch, phát hiện hoặc thay đổi đã kiểm tra tùy việc bạn giao.](docs/images/workflow-vi.svg)
+
+| Bước | Codex làm gì | Kết quả |
+|---|---|---|
+| Khảo sát | Đọc yêu cầu, màn hình, component và hướng dẫn thương hiệu sẵn có. | Mục tiêu, phạm vi và thao tác chính cần kiểm tra. |
+| Chọn | Đối chiếu danh mục và giao cho mỗi skill một việc cụ thể. | Hướng thiết kế, phương pháp và cách nghiệm thu. Yêu cầu lập kế hoạch dừng ở đây. |
+| Review hoặc triển khai | Tái hiện vấn đề trên luồng đang chạy hoặc thực hiện thay đổi đã yêu cầu. | Phát hiện kèm vị trí hoặc giao diện có thể dùng thử. |
+| Kiểm chứng | Thử thao tác chính, bàn phím, màn hình hẹp và các trạng thái liên quan. | Kết quả quan sát được và phần còn thiếu bằng chứng. |
+
+## Bộ công cụ
+
+Với một ô nhập địa chỉ, Codex có thể chỉ cần phương pháp review biểu mẫu. Các nguồn cho chuyển động và 3D dành cho những brief thực sự cần đến chúng.
+
+| Vai trò | Repo | Khi nào dùng |
+|---|---|---|
+| Hướng thiết kế | [Hallmark](https://github.com/Nutlope/hallmark) | Chọn bố cục cho trang mới dựa trên thao tác chính. |
+| Website thương hiệu | [Taste Skill](https://github.com/Leonxlnx/taste-skill) | Chọn kiểu chữ và cách dùng ảnh cho trang có nội dung biên tập. |
+| Hệ thống thiết kế | [UI UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | Đối chiếu token và mẫu giao diện dùng chung giữa các màn hình. |
+| Review giao diện | [Jakub Krehel](https://github.com/jakubkrehel/skills) | Rà một nhãn, bố cục, trạng thái focus hoặc thay đổi trong một luồng. |
+| Tinh chỉnh | [Impeccable](https://github.com/pbakaus/impeccable) | Xếp thứ tự các điểm cần cải thiện trên một màn hình hoặc component. |
+| Rà chất lượng | [Anti-slop](https://github.com/miqdadbadjuber/anti-slop) | Rà nội dung, bố cục màn hình hẹp và hoạt động của các nút. |
+| Hoạt ảnh | [GSAP Skills](https://github.com/greensock/gsap-skills) | Xây chuỗi chuyển động và thử khi người dùng bật chế độ giảm chuyển động. |
+| Kể chuyện khi cuộn | [Scroll Craft](https://github.com/nateherkai/scroll-craft) | Thiết kế chuyển cảnh khi nội dung được kể theo nhịp cuộn trang. |
+| Di chuyển camera | [Scroll World](https://github.com/oso95/scroll-world) | Nối các cảnh thành một hành trình camera liên tục. |
+| Cảnh 3D | [Three.js Skills](https://github.com/CloudAI-X/threejs-skills) | Dựng cảnh, camera và điều khiển theo phiên bản Three.js của dự án. |
+| Dựng hình từ ảnh | [img2threejs](https://github.com/img2threejs/img2threejs) | Dựng vật thể bằng code và so sánh hình render với ảnh tham chiếu. |
+| Sơ đồ | [Diagram Design](https://github.com/cathrynlavery/diagram-design) | Chọn loại sơ đồ rồi kiểm tra nhãn, đường nối và các nhánh. |
 
 ## Chọn việc cần làm
 
@@ -67,21 +88,29 @@ Thêm `$design-team` vào đầu yêu cầu. Nếu đã có giao diện, gửi k
 
 ![Cùng một địa chỉ đã nhập. Ở phương án bên phải, nhãn Địa chỉ vẫn hiện phía trên ô để người dùng biết mình đang điền gì.](docs/images/checkout-vi.svg)
 
-**Thử lại sau khi sửa.** nhập địa chỉ, rời ô rồi dùng bàn phím quay lại. Nhãn cần luôn đọc được và liên kết đúng với ô nhập. Có thể xem chi tiết mẫu thử và phạm vi đã kiểm tra trong [biên bản kiểm chứng](VALIDATION.md).
+**Thử lại sau khi sửa.** Nhập địa chỉ, rời ô rồi dùng bàn phím quay lại. Nhãn cần luôn đọc được và liên kết đúng với ô nhập. Có thể xem chi tiết mẫu thử và phạm vi đã kiểm tra trong [biên bản kiểm chứng](VALIDATION.md).
 
-## Bộ công cụ
+## Cài đặt
 
-Codex bắt đầu từ mục tiêu, giao diện và nhận diện sẵn có. Với trang thanh toán đang chạy, việc cần làm có thể chỉ là rà bố cục và khả năng dùng bàn phím. Với website thương hiệu mới, quyết định đầu tiên có thể là cách dùng chữ và hình ảnh. Mỗi skill được chọn đều có một việc cụ thể và cách kiểm tra kết quả.
+<details>
+<summary>Thử trước khi cài hoặc chỉ cài cho một dự án</summary>
 
-| Việc thiết kế | Nguồn Codex tham khảo |
-|---|---|
-| Chọn hướng thiết kế | **Hallmark** cho bố cục trang mới. **Taste Skill** cho website thương hiệu cần chú trọng chữ và ảnh. |
-| Xây hệ thống hoặc sửa một màn hình | **UI UX Pro Max** cho token và mẫu giao diện dùng lại. **Bộ skill của Jakub Krehel** cho bố cục, nhãn, trạng thái focus hoặc review một luồng. |
-| Review và hoàn thiện | **Impeccable** để nhận xét và tinh chỉnh một khu vực. **Anti-slop** để rà nội dung, bố cục trên điện thoại và các nút có hoạt động đúng hay không. |
-| Thiết kế chuyển động | **GSAP Skills** cho kỹ thuật animation, **Scroll Craft** cho nội dung kể chuyện theo thao tác cuộn và **Scroll World** cho hành trình camera xuyên suốt các cảnh. |
-| Làm 3D | **Three.js Skills** cho cảnh, camera và điều khiển. **img2threejs** khi cần dựng vật thể bằng code từ ảnh tham chiếu. |
-| Giải thích quy trình | **Diagram Design** cho sơ đồ theo nhận diện, có nhãn dễ đọc và đường nối rõ ràng. |
+Sau khi clone, đưa Codex đường dẫn tuyệt đối đến `skills/design-team/SKILL.md` và yêu cầu dùng hướng dẫn trong file đó cho brief của bạn. Sau khi cài, bạn có thể gọi trực tiếp bằng tên skill.
 
-Danh mục ghi điều kiện chạy và dẫn tới đúng phiên bản đã khảo sát của từng nguồn. Biên bản kiểm chứng ghi kết quả kiểm tra gói, trình cài và các mẫu thử trên trình duyệt. Việc chạy trọn quy trình của cả 12 công cụ vẫn cần kiểm chứng thêm. [Danh mục skill](skills/design-team/references/catalog.md) · [Hướng dẫn điều phối](skills/design-team/SKILL.md) · [Biên bản kiểm chứng](VALIDATION.md)
+Vị trí cài mặc định là `~/.agents/skills/design-team`. Muốn dùng riêng cho một dự án, dùng đường dẫn đích của dự án như trong ví dụ dưới đây.
+
+```powershell
+./scripts/Install-Skill.ps1 -Destination 'C:\dev\my-project\.agents\skills\design-team'
+```
+
+Nếu cài thủ công, chép cả thư mục `skills/design-team`, gồm `references` và `agents`, tới vị trí đó. Script yêu cầu thư mục đích mới để giữ nguyên bản đã cài.
+
+</details>
+
+## Tài liệu và kiểm chứng
+
+- Quy tắc chọn phương pháp và bàn giao kết quả. [Hướng dẫn điều phối](skills/design-team/SKILL.md)
+- Phiên bản đã khảo sát, điều kiện chạy và giới hạn của từng nguồn. [Danh mục 12 repo](skills/design-team/references/catalog.md)
+- Kiểm tra gói, trình cài và các mẫu thử trên trình duyệt. Việc chạy trọn quy trình với cả 12 công cụ vẫn cần kiểm chứng thêm. [Biên bản kiểm chứng](VALIDATION.md)
 
 Design Team kế thừa cách chọn công cụ theo dự án của [Security Team](https://github.com/imnwngr/security-team), từ [danh sách design-skills](https://github.com/stars/imnwngr/lists/design-skills).

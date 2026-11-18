@@ -1,12 +1,22 @@
 ![Design Team cover, a booking form moves from tracing paper to a printed screen on a designer’s desk.](docs/images/studio-cover.jpg)
 
-# Design Team
+<h1 align="center">Design Team</h1>
+<p align="center"><strong>Project-aware design planning and review with Codex.</strong></p>
+<p align="center"><strong>English</strong> · <a href="README.vi.md">Tiếng Việt</a></p>
+<p align="center">
+  <a href="#quick-start">Quick start</a> ·
+  <a href="#from-brief-to-result">Pipeline</a> ·
+  <a href="#meet-the-toolkit">Toolkit</a> ·
+  <a href="#installation">Installation</a> ·
+  <a href="#documentation-and-validation">Documentation</a>
+</p>
 
-**Tell Codex which screen you’re working on and what someone needs to do there.** Design Team helps it choose the right methods from 12 design repositories. Ask for a plan before touching code, a second look at an awkward interaction, or a working change you can try.
+---
 
-**English** · [Tiếng Việt](README.vi.md)
+**What does this screen need so people can finish their task?** Give Codex a screen, flow or screenshot. Design Team guides it through the project, selects methods from twelve repositories and returns the plan, review or working change you asked for.
 
-[Quick start](#quick-start) · [Pick a task](#pick-a-task) · [See a review](#see-a-review) · [Meet the toolkit](#meet-the-toolkit)
+> [!NOTE]
+> The package installs the coordinating skill and its catalog. Each specialist tool has its own prerequisites. Codex records what it exercised and which checks remain open.
 
 ## Quick start
 
@@ -31,24 +41,35 @@ Plan only.
 
 Expect a short plan naming the main action, the design direction, the selected skills and the checks. The installer copies the coordinator and its catalog. You can start planning immediately and check any specialist tool’s prerequisites when you need it.
 
-<details>
-<summary>Try it before installing, or install for one project</summary>
-
-After cloning, give Codex the absolute path to `skills/design-team/SKILL.md` and ask it to follow that file for your brief. Once you install the skill, you can invoke it by name.
-
-The default installation lives at `~/.agents/skills/design-team`. To install only for one project, pass its destination to the installer.
-
-```powershell
-./scripts/Install-Skill.ps1 -Destination 'C:\dev\my-project\.agents\skills\design-team'
-```
-
-For a manual install, copy the entire `skills/design-team` folder, including `references` and `agents`, to that destination. The installer requires a new destination and preserves an existing installation.
-
-</details>
-
 ## From brief to result
 
 ![Codex reads the project and brief, selects methods, then returns a plan, findings or a tested change according to the task.](docs/images/workflow-en.svg)
+
+| Stage | What Codex does | Output |
+|---|---|---|
+| Assess | Read the brief, affected screen, components and brand guidance. | Scope, audience and the primary action to check. |
+| Select | Choose methods and give each a specific job. | Direction, selected skills and acceptance checks. A plan-only request ends here. |
+| Review or build | Trace the problem through the flow or implement the requested change. | Findings with locations or a working interface. |
+| Verify | Exercise the main action, keyboard, narrow layout and relevant states. | Observed results and checks still needing evidence. |
+
+## Meet the toolkit
+
+An address field may need only an interface review. Motion and 3D specialists come into play when the brief calls for them.
+
+| Role | Repository | When it helps |
+|---|---|---|
+| Page direction | [Hallmark](https://github.com/Nutlope/hallmark) | Choose the composition for a new page around its primary action. |
+| Brand website | [Taste Skill](https://github.com/Leonxlnx/taste-skill) | Set the typography and art direction for a site with editorial content and photography. |
+| Design system | [UI UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | Compare tokens and reusable patterns across screens. |
+| Interface review | [Jakub Krehel](https://github.com/jakubkrehel/skills) | Investigate a particular label, layout, focus state or change to a flow. |
+| Critique and polish | [Impeccable](https://github.com/pbakaus/impeccable) | Prioritize improvements to a specific screen or component. |
+| Quality review | [Anti-slop](https://github.com/miqdadbadjuber/anti-slop) | Check real content, narrow layouts and controls in the chosen direction. |
+| Animation | [GSAP Skills](https://github.com/greensock/gsap-skills) | Implement a timeline and check how it behaves with reduced motion. |
+| Scroll narrative | [Scroll Craft](https://github.com/nateherkai/scroll-craft) | Plan transitions when the story unfolds as the reader scrolls. |
+| Camera flight | [Scroll World](https://github.com/oso95/scroll-world) | Connect scenes into one continuous camera journey. |
+| 3D engineering | [Three.js Skills](https://github.com/CloudAI-X/threejs-skills) | Set up a scene, camera and controls for the project’s Three.js version. |
+| Image to model | [img2threejs](https://github.com/img2threejs/img2threejs) | Reconstruct a supplied object in code and compare the render with its reference. |
+| Diagrams | [Diagram Design](https://github.com/cathrynlavery/diagram-design) | Choose a diagram type and verify labels, connections and branches. |
 
 ## Pick a task
 
@@ -67,21 +88,29 @@ Use `$design-team` at the start of any example. A route, screenshot or component
 
 ![The same address entered in two fields. A persistent Street address label above the second field keeps its purpose visible.](docs/images/checkout-en.svg)
 
-**Check the proposed fix.** enter an address, move focus away, then return with the keyboard. The label should still be visible and associated with the input. The original fixture and the scope of the browser check are documented in the [validation record](VALIDATION.md).
+**Check the proposed fix.** Enter an address, move focus away, then return with the keyboard. The label should still be visible and associated with the input. The original fixture and the scope of the browser check are documented in the [validation record](VALIDATION.md).
 
-## Meet the toolkit
+## Installation
 
-Codex starts with your brief, existing components and brand guidance. For an established checkout, it can go straight to layout and accessibility. A new editorial site may need art direction first. Each selected skill gets a specific job and a way to check the result.
+<details>
+<summary>Try it before installing, or install for one project</summary>
 
-| Design job | Where Codex looks |
-|---|---|
-| Find a visual direction | **Hallmark** for a new page’s composition. **Taste Skill** for brand-led websites where typography and photography carry the story. |
-| Build a system or fix a screen | **UI UX Pro Max** for tokens and reusable patterns. **Jakub Krehel’s skills** for a particular layout, label, focus state or interface review. |
-| Critique and refine | **Impeccable** for targeted critique and polish. **Anti-slop** for a final pass on content, responsive layout and working controls. |
-| Design motion | **GSAP Skills** for animation implementation, **Scroll Craft** for scroll-led storytelling and **Scroll World** for a continuous camera flight. |
-| Work in 3D | **Three.js Skills** for scenes, cameras and controls. **img2threejs** for reconstructing a supplied reference as a procedural model. |
-| Explain a process | **Diagram Design** for a branded diagram with readable labels and traceable connections. |
+After cloning, give Codex the absolute path to `skills/design-team/SKILL.md` and ask it to follow that file for your brief. Once you install the skill, you can invoke it by name.
 
-The catalog links to the exact upstream revisions reviewed and describes their prerequisites. The validation record lists package checks, installer tests and browser fixtures. Native execution across all twelve tools still needs end-to-end testing. [Skill catalog](skills/design-team/references/catalog.md) · [Coordinator instructions](skills/design-team/SKILL.md) · [Validation](VALIDATION.md)
+The default installation lives at `~/.agents/skills/design-team`. To install only for one project, pass its destination to the installer.
 
-Design Team grew out of the same selection workflow as [Security Team](https://github.com/imnwngr/security-team), using the [design-skills collection](https://github.com/stars/imnwngr/lists/design-skills).
+```powershell
+./scripts/Install-Skill.ps1 -Destination 'C:\dev\my-project\.agents\skills\design-team'
+```
+
+For a manual install, copy the entire `skills/design-team` folder, including `references` and `agents`, to that destination. The installer requires a new destination and preserves an existing installation.
+
+</details>
+
+## Documentation and validation
+
+- How Codex selects methods and hands off results. [Coordinator instructions](skills/design-team/SKILL.md)
+- Reviewed revisions, prerequisites and limits for each source. [Routing catalog](skills/design-team/references/catalog.md)
+- Package checks, installation tests and browser fixtures. End-to-end execution across all twelve upstream tools remains unverified. [Validation record](VALIDATION.md)
+
+Design Team follows the project-based selection model from [Security Team](https://github.com/imnwngr/security-team) and draws on the [design-skills collection](https://github.com/stars/imnwngr/lists/design-skills).
